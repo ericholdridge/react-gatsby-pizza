@@ -1,4 +1,13 @@
-var plugins = []
+var plugins = [{
+      plugin: require('/Users/ericholdridge/Documents/Projects/react-gatsby-pizza/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('/Users/ericholdridge/Documents/Projects/react-gatsby-pizza/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      options: {"plugins":[],"projectId":"4o0jwvqo","dataset":"production","watchMode":true,"token":"skiqI8nEGR8aqVB3ddcoyPol76U3UCo0d7DlBQLFipDC0IRsJYGGSjPFrlG1Paftco2QKfYbHCQ8h6ceqgFPrUjcAgwMSP8ujd8OzSLJlLRaUt7UrT32QVjajdAOvFbUZ2XXhjgnsIgUApRobSAB5Q0Kef35z7XpYrMcL83ZepscPvFUBfB3"},
+    },{
+      plugin: require('/Users/ericholdridge/Documents/Projects/react-gatsby-pizza/gatsby/gatsby-ssr'),
+      options: {"plugins":[]},
+    }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
