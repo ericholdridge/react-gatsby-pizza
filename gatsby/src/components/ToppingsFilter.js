@@ -54,15 +54,8 @@ function countPizzasInToppings(pizzas) {
 }
 
 export default function ToppingsFilter() {
-  const { toppings, pizzas } = useStaticQuery(graphql`
+  const { pizzas } = useStaticQuery(graphql`
     query {
-      toppings: allSanityTopping {
-        nodes {
-          name
-          id
-          vegetarian
-        }
-      }
       pizzas: allSanityPizza {
         nodes {
           toppings {
@@ -75,11 +68,10 @@ export default function ToppingsFilter() {
   `);
 
   const toppingsWithCounts = countPizzasInToppings(pizzas.nodes);
-  console.clear();
   return (
     <ToppingsStyles>
       {toppingsWithCounts.map((topping) => (
-        <Link to={`/toppng/${topping.name}`} key={topping.id}>
+        <Link to={`/topping/${topping.name}`} key={topping.id}>
           <span className="name">{topping.name}</span>
           <span className="count">{topping.count}</span>
         </Link>
